@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+// import Image from 'next/image'
+import Script from 'next/script'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
@@ -10,17 +11,16 @@ const Home: NextPage = () => {
         <title>Russell Patrick Brown</title>
         <meta name="description" content="Harper, Coder, Psychic Medium, Author, Embodied TechnoWizard" />
         <link rel="icon" href="/favicon.ico" />
-        <script
-          id="mcjs"
-          dangerouslySetInnerHTML={{
-            __html: `
-              !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],
-              m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script",
-              "https://chimpstatic.com/mcjs-connected/js/users/b1337ad19144b56ac4752f6ec/bd94fb4b98c2f0d8289ddf0e2.js");
-            `
-          }}
-        />
       </Head>
+      <Script
+        id='mcjs'
+        strategy='afterInteractive'
+        dangerouslySetInnerHTML={{
+          __html: `
+            !function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/b1337ad19144b56ac4752f6ec/bd94fb4b98c2f0d8289ddf0e2.js");
+          `
+        }}
+      />
 
       <main className={styles.main}>
         <h1 className={styles.title}>
